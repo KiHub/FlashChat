@@ -20,10 +20,10 @@ class RegisterViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let e = error {
-                print(e)
+                print(e.localizedDescription)
             } else {
                 //Navigate to chat
-                self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                self.performSegue(withIdentifier: K.registerSegue, sender: self)
             }
         }
         }
