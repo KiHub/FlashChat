@@ -11,7 +11,7 @@ import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: CLTypingLabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
@@ -26,19 +26,19 @@ class WelcomeViewController: UIViewController {
         
         titleLabel.text = K.appName
         
-//        titleLabel.text = ""
-//        var charIndex = 0.0
-//        let tittleText = "⚡️FlashChat"
-//
-//        for letter in tittleText {
-//            print(charIndex)
-//            print(letter)
-//
-//            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
-//                self.titleLabel.text?.append(letter)
-//            }
-//            charIndex += 1
-//        }
+        titleLabel.text = ""
+        var charIndex = 0.0
+        let tittleText = "⚡️FlashChat"
+
+        for letter in tittleText {
+            print(charIndex)
+            print(letter)
+
+            Timer.scheduledTimer(withTimeInterval: 0.1 * charIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
         
 
        
